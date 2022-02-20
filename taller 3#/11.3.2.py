@@ -15,18 +15,29 @@ listaar=[]
 listasss=[]
 listadad=[]
 listamen=[]
-listacer=[1]
+listacer=[]
 listawhi=[]
 listaput=[]
 while True:
     if((s=="no")):
-        print(f"aguardiente {a} \nRON {r} \ncerveza {c} \ntequila {t} \nwhisky {w} \notro {o}")
-        print(len(listas))
-        print(len(listasss))
-        print(len(listamen))
-        print(sum(listaput)/sum(listacer))
-        print(len(listawhi)/len(listas))
-        break
+        lism=sum(listacer)
+        if(lism==0):
+            listacer=[1]
+            print(f"aguardiente {a} \nRON {r} \ncerveza {c} \ntequila {t} \nwhisky {w} \notro {o}")
+            print(len(listas))
+            print(len(listasss))
+            print(len(listamen))
+            print(sum(listaput)/sum(listacer))
+            print(len(listawhi)/len(listas))
+            break
+        else:
+            print(f"aguardiente {a} \nRON {r} \ncerveza {c} \ntequila {t} \nwhisky {w} \notro {o}")
+            print(len(listas))
+            print(len(listasss))
+            print(len(listamen))
+            print(sum(listaput)/sum(listacer))
+            print(len(listawhi)/len(listas))
+            break
     elif(s=="si"):
         edad=int(input("¿cual es tu edad? "))
         listadad.append(edad)
@@ -34,6 +45,10 @@ while True:
         if(edad<19)and(sexo==2):
             yas=edad
             listasss.append(yas)
+        if(ar!=5):
+            if(19>edad<26)and(sexo==1):
+                men=edad
+                listamen.append(men)
         ar=int(input("1-aguardiente, 2-ron, 3-cerveza, 4-tequila, 5-whisky, 6-otro: "))
         listas.append(ar)
         print("nueva encuesta")
@@ -59,11 +74,3 @@ while True:
         elif(edad>=0):
             listadad.append(edad)
             continue
-        elif(ar!=5):
-            if(19>edad<26)and(sexo==1):
-                men=edad
-                listamen.append(men)
-            
-            
-            
-
