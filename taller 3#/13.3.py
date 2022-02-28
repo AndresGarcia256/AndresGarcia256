@@ -14,7 +14,7 @@ for i in range(0, e):
     ña = [i for i in lista1 if i>ab]
     ñi=(len(ña)*100)/len(lista1)
     m = [i for i in lista1 if i<ab]
-    q=(len(m)*100)/len(lista1)
+    q=(len(m)*100)/len(lista1)      
 print(f"el estudiante con mayor puntaje es:", (lista3[lista1.index(max(lista1))]))
 print(f"el estudiante con menor puntaje es:", (lista3[lista1.index(min(lista1))]))
 print("el mayor puntaje se: ", max(lista1))
